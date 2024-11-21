@@ -17,10 +17,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 `Стоимость: ${price}`;
         }
     }
-    const calc = (quantity) => {
-        if(quantity === "")
-            return 0;
-        else if (/^[0-9]+$/.test(quantity)) {
+     const calc = (quantity) => {
+        if (/^[0-9]+$/.test(quantity)) {
             return productsMap[Select.value].price * quantity;
         } else {
             return NaN;
